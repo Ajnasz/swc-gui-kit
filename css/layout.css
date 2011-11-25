@@ -4,7 +4,7 @@
  body {
 	 background: #F0F0F0;
  }
- 
+
  /* derpin' with custom YUI grids */
  #custom-doc {
 	margin: auto;
@@ -12,28 +12,27 @@
 	width: 73.84em; /* non-IE */
 	*width: 73.00em; /* IE */
 	min-width: 960px;/* optional but recommended */
-	 
-	 background: yellow;
+  background: yellow;
  }
- 
+
  #yui-main > .yui-b {
 	 background: black;
 	 color: white;
  }
- 
+
  .yui-b {
 	 background: blue;
 	 color: white;
  }
- 
+
  /* twitter bootstrap grids */
  [class*="column"] {
 	 background: white;
-	 
 	 margin-bottom: 20px;
  }
+
  .container {
  }
- 
+
  .column-one-third {
  }
