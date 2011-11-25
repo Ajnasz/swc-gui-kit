@@ -1,0 +1,68 @@
+/* form.css - generic form UI stuff - @eFBe
+ */
+label,
+input,
+select,
+textarea {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: normal;
+}
+
+/* buttons
+ */
+button,
+a.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background: #F4F4F4;
+	box-shadow: 0 1px #FFF inset, 0 1px 2px #EEE;
+	-moz-box-shadow: 0 1px #FFF inset, 0 1px 2px #EEE;
+	-webkit-box-shadow: 0 1px #FFF inset, 0 1px 2px #EEE;
+	font-size: 11px;
+	line-height: 14px;
+	color: #404040;
+	text-shadow: 0 1px #FFF;
+	font-weight: bold;
+	border: 1px solid #DDD;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-transition: background-color .2s linear;
+	-moz-transition: background-color .2s linear;
+	-o-transition: background-color .2s linear;
+	display: inline-block;
+	padding: 10px;
+}
+
+button:hover,
+button:focus,
+a.button:hover,
+a.button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+	background-color: #E4E4E4;
+    box-shadow: 0 1px rgba(255, 255, 255, .6) inset;
+    -moz-box-shadow: 0 1px rgba(255, 255, 255, .6) inset;
+    -webkit-box-shadow: 0 1px rgba(255, 255, 255, .6) inset;
+	color: #000;
+}
+
+button:active,
+a.button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active{
+	background-color: #CCC;
+	color: #000;
+}
+
+a.button {
+	text-decoration: none;
+}

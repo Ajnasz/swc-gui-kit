@@ -1,0 +1,502 @@
+/*!
+ * Bootstrap v1.3.0
+ *
+ * Copyright 2011 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ * Date: Thu Sep 22 12:52:42 PDT 2011
+ */
+/* Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* I don't need all these shit, just the reset & layout. peace - @eFBe
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dd,
+dl,
+dt,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 100%;
+  line-height: 1;
+  font-family: inherit;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ol, ul {
+  list-style: none;
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus, a:hover, a:active {
+  outline: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; /* proper resize with width and height */
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button, input {
+  line-height: normal;
+  *overflow: visible;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/*
+ * Scaffolding
+ * Basic and global styles for generating a grid system, structural layout, and page templates
+ * ------------------------------------------------------------------------------------------- */
+/* I switched all the 'span' classes to 'column' because it was dumb - @eFBe
+ */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #404040;
+}
+.container {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  zoom: 1;
+}
+.container:before, .container:after {
+  display: table;
+  content: "";
+  zoom: 1;
+  *display: inline;
+}
+.container:after {
+  clear: both;
+}
+.container-fluid {
+  position: relative; /* ??? @eFBe */
+  min-width: 940px;
+  padding-left: 20px;
+  padding-right: 20px;
+  zoom: 1;
+}
+.container-fluid:before, .container-fluid:after {
+  display: table;
+  content: "";
+  zoom: 1;
+  *display: inline;
+}
+.container-fluid:after {
+  clear: both;
+}
+.container-fluid > .sidebar {
+  float: left;
+  width: 220px;
+}
+.container-fluid > .content {
+  margin-left: 240px;
+}
+a {
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.row {
+  zoom: 1;
+  margin-left: -20px;
+}
+.row:before, .row:after {
+  display: table;
+  content: "";
+  zoom: 1;
+  *display: inline;
+}
+.row:after {
+  clear: both;
+}
+[class*="column"] {
+  display: inline;
+  float: left;
+  margin-left: 20px;
+}
+.column1 {
+  width: 40px;
+}
+.column2 {
+  width: 100px;
+}
+.column3 {
+  width: 160px;
+}
+.column4 {
+  width: 220px;
+}
+.column5 {
+  width: 280px;
+}
+.column6 {
+  width: 340px;
+}
+.column7 {
+  width: 400px;
+}
+.column8 {
+  width: 460px;
+}
+.column9 {
+  width: 520px;
+}
+.column10 {
+  width: 580px;
+}
+.column11 {
+  width: 640px;
+}
+.column12 {
+  width: 700px;
+}
+.column13 {
+  width: 760px;
+}
+.column14 {
+  width: 820px;
+}
+.column15 {
+  width: 880px;
+}
+.column16 {
+  width: 940px;
+}
+.column17 {
+  width: 1000px;
+}
+.column18 {
+  width: 1060px;
+}
+.column19 {
+  width: 1120px;
+}
+.column20 {
+  width: 1180px;
+}
+.column21 {
+  width: 1240px;
+}
+.column22 {
+  width: 1300px;
+}
+.column23 {
+  width: 1360px;
+}
+.column24 {
+  width: 1420px;
+}
+.offset1 {
+  margin-left: 80px;
+}
+.offset2 {
+  margin-left: 140px;
+}
+.offset3 {
+  margin-left: 200px;
+}
+.offset4 {
+  margin-left: 260px;
+}
+.offset5 {
+  margin-left: 320px;
+}
+.offset6 {
+  margin-left: 380px;
+}
+.offset7 {
+  margin-left: 440px;
+}
+.offset8 {
+  margin-left: 500px;
+}
+.offset9 {
+  margin-left: 560px;
+}
+.offset10 {
+  margin-left: 620px;
+}
+.offset11 {
+  margin-left: 680px;
+}
+.offset12 {
+  margin-left: 740px;
+}
+.column-one-third {
+  width: 300px;
+}
+.column-two-thirds {
+  width: 620px;
+}
+.offset-one-third {
+  margin-left: 340px;
+}
+.offset-two-thirds {
+  margin-left: 660px;
+}
+/* Other useful global stuff comes here - @eFBe
+ */
+.hidden {
+	display: none;
+}
+.clr {
+	clear: both;
+}
+.clrafter:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* Some typo stuff from the original bootstrap.css
+ * Headings, body text, lists, code, and more for a versatile and durable typography system
+ * ---------------------------------------------------------------------------------------- */
+p {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  margin-bottom: 10px;
+  color: #404040;
+}
+p small {
+  font-size: 11px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: #404040;
+}
+h1 {
+  font-size: 30px;
+  line-height: 36px;
+}
+h1 small {
+  font-size: 18px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+h2 small {
+  font-size: 14px;
+}
+h3,
+h4,
+h5,
+h6 {
+  line-height: 36px;
+}
+h3 {
+  font-size: 18px;
+}
+h3 small {
+  font-size: 14px;
+}
+h4 {
+  font-size: 16px;
+}
+h4 small {
+  font-size: 12px;
+}
+h5 {
+  font-size: 14px;
+}
+h6 {
+  font-size: 13px;
+}
+ul, ol {
+  margin: 0 0 10px 20px;
+}
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+li {
+  line-height: 18px;
+  color: #404040;
+  margin-bottom: 10px;
+}
+ul.unstyled { /* might be useful so i keep it - @eFBe */
+  list-style: none;
+  margin-left: 0;
+}
+dl {
+  margin-bottom: 10px;
+}
+dl dt, dl dd {
+  line-height: 18px;
+}
+dl dt {
+  font-weight: bold;
+}
+dl dd {
+  margin-left: 10px;
+}
+strong {
+  font-style: inherit;
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+/* Also some basic form typo stuff - gonna move it to forms.css - @eFBe
+ */
+label,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+}
